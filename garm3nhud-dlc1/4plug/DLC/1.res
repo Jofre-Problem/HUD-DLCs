@@ -1,0 +1,1 @@
+#base "../../ui_overrides/scripts/shortcut/old/resolution_crosshair_sc.res"

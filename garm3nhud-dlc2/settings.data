@@ -1,0 +1,644 @@
+[BG:#1E1E1E]
+Window();
+
+[Border:0, FG:#1C1B1C]
+Banner("4plug/4plug_images_dlc2/thumbnailBanner.png", "auto", "topleft");
+Banner("4plug/4plug_images_dlc2/thumbnailBanner_v2.png", "auto", "topleft");
+Banner("4plug/4plug_images_dlc2/introduction.png", "auto", "topleft");
+Banner("4plug/4plug_images_dlc2/bug.png", "auto", "topleft");
+[Border:0, FG:#1C1B1C]
+Banner("4plug/4plug_images_dlc2/colores.png", "auto", "topleft");
+Banner("4plug/4plug_images_dlc2/cr.png", "auto", "topleft");
+
+Banner("4plug/4plug_images_dlc2/thumbnailBannerBottom.png", "auto", "topleft");
+
+Banner("4plug/4plug_images_dlc2/crossk.png", "auto", "topleft");
+
+
+[Name:TF2 Crosshairs, Default:Lower, FG:#7A5EF8, BG:#E11322, Border:0]
+GlobalComboBox("TF2 Crosshairs", "TF2 Crosshairs")
+{
+OFF
+!
+#
+$
+%
+'
+(
+)
+*
++
+,
+-
+.
+/
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+:
+;
+<
+=
+>
+?
+[
+\
+]
+^
+_
+`
+A (Mayus)
+B (Mayus)
+C (Mayus)
+D (Mayus)
+E (Mayus)
+F (Mayus)
+G (Mayus)
+H (Mayus)
+I (Mayus)
+J (Mayus)
+K (Mayus)
+L (Mayus)
+M (Mayus)
+N (Mayus)
+O (Mayus)
+P (Mayus)
+Q (Mayus)
+R (Mayus)
+S (Mayus)
+T (Mayus)
+U (Mayus)
+V (Mayus)
+W (Mayus)
+X (Mayus)
+Y (Mayus)
+Z (Mayus)
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+}
+
+
+[Name:CrossHair Color, Default:Lower, FG:#7A5EF8, BG:#E11322, Border:0]
+GlobalComboBox("CrossHair Color", "CrossHair Color")
+{
+White
+Yellow
+Blue
+Red
+Black
+Gray
+Green
+Orange
+Skyblue
+Purple
+Blue Violet
+Amazon
+Blood Red
+Blush
+Bright Green
+Cafe
+Cocoa Brown
+Coffee
+Dark Green
+Dark Purple
+Dark Red
+}
+[Name:Outline, Default:Lower, FG:#7A5EF8, BG:#E11322, Border:0]
+GlobalComboBox("Outline", "Outline")
+{
+OFF
+ON
+}
+[Name:Scale, Default:Lower, FG:#7A5EF8, BG:#F4F4F4, Border:0]
+GlobalComboBox("Scale", "Scale")
+{
+Medium Big
+Medium
+}
+Banner("4plug/4plug_images_dlc2/hitmarker_label.png", "auto", "topleft");
+Banner("4plug_images/managers/thumbnailBannerBottom.png", "auto", "topleft");
+[Name:Hitmarkers, Default:Lower, FG:#7A5EF8, BG:#5094AF, Border:0]
+GlobalComboBox("Hitmarkers", "Hitmarkers")
+{
+OFF (Default)
+^
+brackets
+circle
+dot
+dots
+hollowcross
+overwatch
+wings
+x
+}
+[Border:0, FG:#1C1B1C]
+Banner("4plug/4plug_images_dlc2/hitmarker.png", "auto", "topleft");
+#if Hitmarkers == "OFF (Default)"
+{
+Copy("4plug/4plug_overrides/empty.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/empty.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/off.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "^"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/1.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "brackets"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/2.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "circle"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/3.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "dot"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/4.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "dots"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/5.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "hollowcross"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/6.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "overwatch"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/7.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "wings"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/8.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if Hitmarkers == "x"
+{
+Copy("4plug/4plug_overrides/Hitmarker/hitmarker_sc_on.res", "ui_overrides/scripts/shortcut/old/hitmarker_sc.res");
+Copy("4plug/4plug_overrides/Hitmarker/Rework/9.res", "ui_overrides/resource/ui/hitmarkers.res");
+Copy("4plug/4plug_overrides/Hitmarker/on.txt", "ui_overrides/scripts/4plug/hitmarker.txt");
+}
+#if TF2 Crosshairs == "OFF"
+{
+Copy("empty.txt", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "!"
+{
+Copy("4plug/4plug_overrides/crosshair1/exclamacion.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "$"
+{
+Copy("4plug/4plug_overrides/crosshair1/dinero.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "%"
+{
+Copy("4plug/4plug_overrides/crosshair1/porcentaje.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "#"
+{
+Copy("4plug/4plug_overrides/crosshair1/michi.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "'"
+{
+Copy("4plug/4plug_overrides/crosshair1/comaarriba.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "("
+{
+Copy("4plug/4plug_overrides/crosshair1/parentesis1.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == ")"
+{
+Copy("4plug/4plug_overrides/crosshair1/parentesis2.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "*"
+{
+Copy("4plug/4plug_overrides/crosshair1/simbolo_por.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == ","
+{
+Copy("4plug/4plug_overrides/crosshair1/,.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "-"
+{
+Copy("4plug/4plug_overrides/crosshair1/-.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "."
+{
+Copy("4plug/4plug_overrides/crosshair1/punto.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == ":"
+{
+Copy("4plug/4plug_overrides/crosshair1/dospuntos.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == ";"
+{
+Copy("4plug/4plug_overrides/crosshair1/puntoycoma.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "@"
+{
+Copy("4plug/4plug_overrides/crosshair1/arroba.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "/"
+{
+Copy("4plug/4plug_overrides/crosshair1/slash.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "+"
+{
+Copy("4plug/4plug_overrides/crosshair1/+.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "<"
+{
+Copy("4plug/4plug_overrides/crosshair1/left_arrow.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == ">"
+{
+Copy("4plug/4plug_overrides/crosshair1/right_arrow.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "="
+{
+Copy("4plug/4plug_overrides/crosshair1/igual.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "?"
+{
+Copy("4plug/4plug_overrides/crosshair1/pregunta.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "]"
+{
+Copy("4plug/4plug_overrides/crosshair1/].res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "["
+{
+Copy("4plug/4plug_overrides/crosshair1/[.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "\"
+{
+Copy("4plug/4plug_overrides/crosshair1/slash_2.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "^"
+{
+Copy("4plug/4plug_overrides/crosshair1/^.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "^"
+{
+Copy("4plug/4plug_overrides/crosshair1/^.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "_"
+{
+Copy("4plug/4plug_overrides/crosshair1/_.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "`"
+{
+Copy("4plug/4plug_overrides/crosshair1/`.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "A (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/a.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "B (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/b.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "C (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/c.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "D (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/d.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "E (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/e.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "F (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/f.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "G (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/g.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "H (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/h.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "I (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/i.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "J (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/j.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "K (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/k.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "L (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/l.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "M (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/m.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "N (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/n.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "O (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/o.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "P (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/p.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "Q (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/q.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "R (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/r.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "S (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/s.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "T (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/t.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "U (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/u.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "V (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/v.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "W (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/w.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "X (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/x.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "Y (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/y.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "Z (Mayus)"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/MAYUS/z.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "a"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/a.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "b"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/b.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "c"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/c.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "d"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/d.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "e"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/e.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "f"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/f.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "g"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/g.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "h"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/h.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "i"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/i.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "j"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/j.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "k"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/k.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "l"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/l.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "m"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/m.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "n"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/n.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "o"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/o.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "p"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/p.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "q"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/q.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "r"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/r.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "s"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/s.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "t"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/t.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "y"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/y.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "u"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/u.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "v"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/v.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "w"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/w.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "x"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/x.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if TF2 Crosshairs == "z"
+{
+Copy("4plug/4plug_overrides/crosshair1/c/z.res", "ui_overrides/extrares_/4plug/general_1.res");
+}
+#if CrossHair Color == "Green"
+{
+Copy("4plug/4plug_overrides/CColors/green.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Orange"
+{
+Copy("4plug/4plug_overrides/CColors/orange.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Skyblue"
+{
+Copy("4plug/4plug_overrides/CColors/skyblue.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Purple"
+{
+Copy("4plug/4plug_overrides/CColors/purple.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "White"
+{
+Copy("4plug/4plug_overrides/CColors/white.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Yellow"
+{
+Copy("4plug/4plug_overrides/CColors/yellow.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Blue"
+{
+Copy("4plug/4plug_overrides/CColors/blue.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Red"
+{
+Copy("4plug/4plug_overrides/CColors/red.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Black"
+{
+Copy("4plug/4plug_overrides/CColors/black.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Gray"
+{
+Copy("4plug/4plug_overrides/CColors/gray.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Amazon"
+{
+Copy("4plug/4plug_overrides/CColors/amazon.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Blood Red"
+{
+Copy("4plug/4plug_overrides/CColors/bloodred.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Blush"
+{
+Copy("4plug/4plug_overrides/CColors/blush.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Bright Green"
+{
+Copy("4plug/4plug_overrides/CColors/bright-green.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Coffee"
+{
+Copy("4plug/4plug_overrides/CColors/coffee.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Dark Green"
+{
+Copy("4plug/4plug_overrides/CColors/dark-green.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Dark Purple"
+{
+Copy("4plug/4plug_overrides/CColors/dark-purple.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Dark Red"
+{
+Copy("4plug/4plug_overrides/CColors/dark-red.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if CrossHair Color == "Blue Violet"
+{
+Copy("4plug/4plug_overrides/CColors/blueviolet.res", "ui_overrides/resource/ui/custom/c/Color_all_1.res");
+}
+#if Outline == "OFF"
+{
+#if Scale == "Medium Big"
+{
+Copy("4plug/4plug_overrides/COutline/OFF.res", "ui_overrides/resource/ui/custom/c/Font_all_1.res");
+}
+#if Scale == "Medium"
+{
+Copy("4plug/4plug_overrides/COutline/m_off.res", "ui_overrides/resource/ui/custom/c/Font_all_1.res");
+}
+}
+#if Outline == "ON"
+{
+#if Scale == "Medium Big"
+{
+Copy("4plug/4plug_overrides/COutline/ON.res", "ui_overrides/resource/ui/custom/c/Font_all_1.res");
+}
+#if Scale == "Medium"
+{
+Copy("4plug/4plug_overrides/COutline/m_on.res", "ui_overrides/resource/ui/custom/c/Font_all_1.res");
+}
+}
